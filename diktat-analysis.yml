@@ -22,3 +22,5 @@
   enabled: false
 - name: CUSTOM_GETTERS_SETTERS
   enabled: false
+- name: WRONG_WHITESPACE
+  enabled: false

@@ -1,9 +1,8 @@
 HELP.md
 .gradle
 build/
-**/src/main/**/application-*.yml
-!**/src/main/**/application-static-data.yml
-!**/src/main/**/application-*.SAMPLE.yml
+**/src/main/**/application.properties
+!**/src/main/**/application*.SAMPLE.properties
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/

@@ -18,15 +18,30 @@
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package dev.realmkit.bot
+package dev.realmkit.bot.app.controller
 
-import dev.realmkit.bot.core.properties.EnvironmentProperties.botCommands
-import dev.realmkit.bot.core.properties.EnvironmentProperties.botToken
 import eu.vendeli.tgbot.TelegramBot
+import eu.vendeli.tgbot.annotations.CommandHandler
+import eu.vendeli.tgbot.api.message
+import eu.vendeli.tgbot.types.User
 
 /**
- * ## [main]
+ * # [StartController]
+ * `/start` command controller
+ *
+ * @see CommandHandler
  */
-suspend fun main() =
-    TelegramBot(botToken, botCommands)
-        .handleUpdates()
+class StartController {
+    /**
+     * ## [start]
+     * `/start` command handler
+     *
+     * @param user the user
+     * @param bot the bot
+     */
+    @CommandHandler(["/start"])
+    suspend fun start(user: User, bot: TelegramBot) {
+        message { "Hello, what's your name?" }.send(user, bot)
+        bot.inputListener.set(user.id, "conversation")
+    }
+}

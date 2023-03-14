@@ -56,6 +56,7 @@ dependencies {
     implementation(libs.kotlin.logging)
     implementation(libs.bundles.kotlinx)
     implementation(libs.bundles.validation)
+    implementation(libs.bot.telegram)
 
     // Test Dependencies
     testImplementation(libs.bundles.test.kotest)

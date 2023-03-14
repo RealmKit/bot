@@ -18,15 +18,16 @@
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package dev.realmkit.bot
+package dev.realmkit.bot.core.properties
 
-import dev.realmkit.bot.core.properties.EnvironmentProperties.botCommands
-import dev.realmkit.bot.core.properties.EnvironmentProperties.botToken
-import eu.vendeli.tgbot.TelegramBot
+import dev.realmkit.hellper.spec.TestSpec
+import io.kotest.matchers.string.shouldNotBeEmpty
 
-/**
- * ## [main]
- */
-suspend fun main() =
-    TelegramBot(botToken, botCommands)
-        .handleUpdates()
+class EnvironmentPropertiesTest : TestSpec({
+    context("unit testing EnvironmentProperties") {
+        expect("to have all environment variables") {
+            EnvironmentProperties.botToken.shouldNotBeEmpty()
+            EnvironmentProperties.botCommands.shouldNotBeEmpty()
+        }
+    }
+})

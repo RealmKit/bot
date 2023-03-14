@@ -18,15 +18,22 @@
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package dev.realmkit.bot
+package dev.realmkit.bot.core.properties
 
-import dev.realmkit.bot.core.properties.EnvironmentProperties.botCommands
-import dev.realmkit.bot.core.properties.EnvironmentProperties.botToken
-import eu.vendeli.tgbot.TelegramBot
+import java.util.Properties
 
-/**
- * ## [main]
- */
-suspend fun main() =
-    TelegramBot(botToken, botCommands)
-        .handleUpdates()
+object EnvironmentProperties {
+    private const val CONFIG = "application.properties"
+    private val properties by lazy { Properties() }
+    private val loader by lazy {
+        val file = this::class.java.classLoader.getResourceAsStream(CONFIG)
+        properties.load(file)
+        properties
+    }
+    val botToken = property("BOT_TOKEN")
+    val botCommands = property("BOT_COMMANDS")
+
+    @Suppress("UNCHECKED_CAST")
+    private fun property(key: String): String =
+        loader.getProperty(key)
+}
