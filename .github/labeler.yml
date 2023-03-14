@@ -1,0 +1,27 @@
+'@bot':
+  - 'src/main/kotlin/dev/realmkit/bot/*'
+  - 'src/main/kotlin/dev/realmkit/bot/**/*'
+
+'@test':
+  - 'src/test/kotlin/*'
+  - 'src/test/kotlin/**/*'
+
+'@doc':
+  - '*.md'
+  - '**/*.md'
+
+'@ci':
+  - '.whitesource'
+  - 'renovate.json'
+  - 'qodana.yaml'
+  - 'codecov.yml'
+  - 'detekt-config.yml'
+  - 'diktat-analysis.yml'
+  - '.github/*'
+  - '.github/**/*'
+
+'@deps':
+  - '*.kts'
+  - '**/*.kts'
+  - 'gradle/*'
+  - 'gradle/**/*'

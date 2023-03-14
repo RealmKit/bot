@@ -1,0 +1,10 @@
+{
+  "groups": [],
+  "properties": [
+    {
+      "name": "spring.devtools.add-properties",
+      "type": "java.lang.Boolean"
+    }
+  ],
+  "hints": []
+}
