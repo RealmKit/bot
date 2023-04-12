@@ -1,5 +1,5 @@
 [versions]
-bot-telegram = "2.7.1"
+bot-telegram = "2.7.3"
 kotlin = "1.8.20-RC"
 kotlin-logging = "4.0.0-beta-2"
 kotlinx-coroutines = "1.7.0-Beta"
