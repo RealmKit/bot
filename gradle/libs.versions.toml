@@ -15,7 +15,7 @@ test-faker = "1.14.0-rc.2"
 test-kotest = "5.5.5"
 test-kotest-konform = "1.0.1"
 test-testcontainers = "1.17.6"
-validation-jackson = "2.14.2"
+validation-jackson = "2.16.1"
 validation-konform = "0.4.0"
 
 [libraries]
