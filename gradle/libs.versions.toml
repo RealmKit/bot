@@ -2,7 +2,7 @@
 bot-telegram = "2.7.1"
 kotlin = "1.8.20-RC"
 kotlin-logging = "4.0.0-beta-2"
-kotlinx-coroutines = "1.7.0-Beta"
+kotlinx-coroutines = "1.9.0"
 kotlinx-kover = "0.7.0-ALPHA"
 quality-catalog = "0.8.0"
 quality-detekt = "1.22.0"
